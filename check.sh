@@ -37,7 +37,17 @@ do
     echo '--------------------------'
     echo 'LOOKING IN THE DEB CONTROL'
     echo '--------------------------'
-    cat ${BPROJECT}/debian/control|grep $LWORD
+    while true
+    do
+        cat ${BPROJECT}/debian/control|grep $LWORD
+        echo 'Are you satisfied with the result or \
+             you want to change the keyword ? ("n" to abort)'
+        read $LWORD
+        if [ $LWORD = "n" ]
+        then
+            exit
+        fi
+    done
     echo '++++++++++++++++++++++++++'
     read
     echo '--------------------------'
