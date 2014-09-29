@@ -34,27 +34,46 @@ do
     echo '+++++++++++-AP-+++++++++++'
     echo "======> [${i}]"
     echo '++++++++++++++++++++++++++'
+    TMPWORD=$LWORD
     echo '--------------------------'
     echo 'LOOKING IN THE DEB CONTROL'
     echo '--------------------------'
     while true
     do
-        cat ${BPROJECT}/debian/control|grep $LWORD
-        echo 'Are you satisfied with the result or \
-             you want to change the keyword ? ("n" to abort)'
-        read $LWORD
-        if [ $LWORD = "n" ]
+        if [ ! -z $TMPWORD ]
         then
-            exit
+            cat ${BPROJECT}/debian/control|grep $TMPWORD
+            echo "..........................
+Do you want to skip/change the keyword '$LWORD' ? (ENTER to abort)
+.........................."
+            read LWORD
+            if [ ! -z $TMPWORD ] && [ $TMPWORD != "n" ]; then break; fi
+        else
+            break
         fi
     done
     echo '++++++++++++++++++++++++++'
     read
+    TMPWORD=$LWORD
     echo '--------------------------'
     echo 'LOOKING IN THE RPM CONTROL'
     echo '--------------------------'
-    cat ${BPROJECT}/rpm/SPECS/*.spec|grep $LWORD
-    echo '++++++++++++++++++++++++++'
+    while true
+    do
+        if [ ! -z $TMPWORD ]
+        then
+            cat ${BPROJECT}/rpm/SPECS/*.spec|grep $TMPWORD
+            echo "..........................
+Do you want to skip/change the keyword '$LWORD' ? (ENTER to abort)
+.........................."
+            read LWORD
+            if [ ! -z $TMPWORD ] && [ $TMPWORD != "n" ]; then break; fi
+        else
+            break
+        fi
+    done
+
+    echo '++++++++++++END+++++++++++'
     read
 done
 
