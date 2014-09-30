@@ -1,0 +1,55 @@
+ai@bajor:~/Scripts/dependency-check$ ls -la
+total 44
+drwxr-xr-x  5 ai ai 4096 Sep 29 16:56 .
+drwxr-xr-x 24 ai ai 4096 Sep 29 15:43 ..
+-rwxr-xr-x  1 ai ai 1848 Sep 30 10:24 check.sh
+drwxr-xr-x  2 ai ai 4096 Sep 29 16:56 example
+drwxr-xr-x  4 ai ai 4096 Sep 29 16:56 example-build
+drwxr-xr-x  8 ai ai 4096 Sep 29 17:59 .git
+-rw-r--r--  1 ai ai  143 Sep 29 16:57 README.md
+ai@bajor:~/Scripts/dependency-check$ ll
+total 44
+drwxr-xr-x  5 ai ai 4096 Sep 29 16:56 ./
+drwxr-xr-x 24 ai ai 4096 Sep 29 15:43 ../
+-rwxr-xr-x  1 ai ai 1848 Sep 30 10:24 check.sh*
+drwxr-xr-x  2 ai ai 4096 Sep 29 16:56 example/
+drwxr-xr-x  4 ai ai 4096 Sep 29 16:56 example-build/
+drwxr-xr-x  8 ai ai 4096 Sep 29 17:59 .git/
+-rw-r--r--  1 ai ai  143 Sep 29 16:57 README.md
+ai@bajor:~/Scripts/dependency-check$ ll
+total 44
+drwxr-xr-x  5 ai ai 4096 Sep 29 16:56 ./
+drwxr-xr-x 24 ai ai 4096 Sep 29 15:43 ../
+-rwxr-xr-x  1 ai ai 1848 Sep 30 10:24 check.sh*
+drwxr-xr-x  2 ai ai 4096 Sep 29 16:56 example/
+drwxr-xr-x  4 ai ai 4096 Sep 29 16:56 example-build/
+drwxr-xr-x  8 ai ai 4096 Sep 29 17:59 .git/
+-rw-r--r--  1 ai ai  143 Sep 29 16:57 README.md
+ai@bajor:~/Scripts/dependency-check$ l
+check.sh*  example/  example-build/  README.md
+ai@bajor:~/Scripts/dependency-check$ l
+check.sh*  example/  example-build/  README.md
+ai@bajor:~/Scripts/dependency-check$ ll
+total 44
+drwxr-xr-x  5 ai ai 4096 Sep 29 16:56 ./
+drwxr-xr-x 24 ai ai 4096 Sep 29 15:43 ../
+-rwxr-xr-x  1 ai ai 1848 Sep 30 10:24 check.sh*
+drwxr-xr-x  2 ai ai 4096 Sep 29 16:56 example/
+drwxr-xr-x  4 ai ai 4096 Sep 29 16:56 example-build/
+drwxr-xr-x  8 ai ai 4096 Sep 29 17:59 .git/
+-rw-r--r--  1 ai ai  143 Sep 29 16:57 README.md
+ai@bajor:~/Scripts/dependency-check$ l
+check.sh*  example/  example-build/  README.md
+ai@bajor:~/Scripts/dependency-check$
+
+
+
+
+
+
+
+
+
+
+
+
