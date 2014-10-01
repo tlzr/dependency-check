@@ -7,6 +7,15 @@ function get_real_path {
     then
         echo 'Error: realpath is not installed.
 Please install it with the help of you packet manager.'
+
+        if [ -f /etc/debian_version ]
+        then
+            echo '
+For Debian/Ubuntu:
+                  /usr/bin/apt-get -y realpath
+'
+        fi
+
         exit 2
     else
         SCRIPTPATH=`realpath $0`
