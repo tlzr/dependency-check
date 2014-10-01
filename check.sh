@@ -12,7 +12,7 @@ Please install it with the help of you packet manager.'
         then
             echo '
 For Debian/Ubuntu:
-                  /usr/bin/apt-get -y realpath
+                   /usr/bin/apt-get install -y realpath
 '
         fi
 
